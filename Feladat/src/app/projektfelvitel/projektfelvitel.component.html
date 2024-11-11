@@ -1,1 +1,16 @@
-<p>projektfelvitel works!</p>
+<div>
+    <div class="row">
+        <div class="col-md-6">
+            <label for="nev">Név</label>
+            <input type="text" id="nev" name="nev" maxlength="50">
+        </div>
+        <div class="col-md-6">
+            <label for="leiras">Leírás</label>
+            <input type="text" id="leiras" name="leiras" maxlength="255">
+        </div>
+    <div class="row text-center">
+        <div class="col-md-12 text-center">
+            <button class="btn btn-primary" (click)="callAPI()">Feltölt</button>
+        </div>
+    </div>
+</div>

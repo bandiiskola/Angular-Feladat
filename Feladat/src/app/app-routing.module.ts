@@ -12,6 +12,9 @@ const routes: Routes = [
   {path:'feladat/feltolt',component:FeladatfelvitelComponent},
   {path:'projekt/lista',component:ProjektlistaComponent},
   {path:'feladat/lista',component:FeladatlistaComponent},
+  {path:'feladat/lista/:id',component:FeladatlistaComponent},
+  {path:'feladat/modosit/:id',component:FeladatfelvitelComponent},
+  {path:'projekt/modosit/:id',component:ProjektfelvitelComponent}
 ];
 
 @NgModule({
