@@ -35,8 +35,8 @@ export class FeladatlistaComponent implements OnInit{
       )
     }
     }
-    torol(param: string) :void{
-      const url=`https://berenandor.moriczcloud.hu/feladat/torles/${this.id}`;
+    torol(id: string){
+      const url=`https://berenandor.moriczcloud.hu/feladat/torles/${id}`;
       console.log(url);
       this.apiService.apiHivas(url).subscribe(
         response =>{

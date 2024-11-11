@@ -1,5 +1,6 @@
 <div *ngFor="let adat of adatok">
     <h1>({{adat.projektid}}){{adat.nev}}</h1>
     <p>{{adat.leiras}}</p>
-    <button class="btn btn-danger" (click)="torol({{adat.id}})">Törlés</button>
+    <button class="btn btn-danger" (click)="torol(adat.id)">Törlés</button>
+    <a  href="feladat/modosit/{{adat.id}}" class="btn btn-primary">Módosít</a>
 </div>

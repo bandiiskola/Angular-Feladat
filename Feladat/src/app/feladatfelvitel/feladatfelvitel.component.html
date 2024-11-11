@@ -10,7 +10,9 @@
         </div>
         <div class="col-md-3">
             <label for="projektid">Projekt ID</label>
-            <input type="number" id="projektid" name="projektid" maxlength="11" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);">
+            <select name="" id="projektid">
+                <option *ngFor="let select of selectek" [value]="select.id">{{select.nev}}</option>
+            </select>
         </div>
         <div class="col-md-1">
             <label for="statusz">Elvégzett?</label>

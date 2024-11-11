@@ -1,5 +1,7 @@
 <div *ngFor="let adat of adatok">
     <h1>({{adat.id}}){{adat.nev}}</h1>
     <p>{{adat.leiras}}</p>
-    <a href="/feladat/lista/{{adat.id}}">Letsgoo</a>
+    <a class="btn btn-primary" href="/feladat/lista/{{adat.id}}">Letsgoo</a>
+    <a class="btn btn-primary" href="/projekt/modosit/{{adat.id}}">Módosít</a>
+
 </div>
