@@ -1,6 +1,38 @@
-<div *ngFor="let adat of adatok">
-    <h1>({{adat.projektid}}){{adat.nev}}</h1>
-    <p>{{adat.leiras}}</p>
-    <button class="btn btn-danger" (click)="torol(adat.id)">Törlés</button>
-    <a  href="feladat/modosit/{{adat.id}}" class="btn btn-primary">Módosít</a>
+<div class="container mt-5">
+    <div class="card bg-dark text-white shadow-sm rounded p-4">
+        <div class="card-body">
+            <h4 class="card-title text-center mb-4">Feladatok Listája</h4>
+            <table class="table table-dark table-striped">
+                <thead>
+                    <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">Projekt ID</th>
+                        <th scope="col">Név</th>
+                        <th scope="col">Leírás</th>
+                        <th scope="col">Státusz</th>
+                        <th scope="col"></th>
+                        <th scope="col"></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let adat of adatok">
+                        <td>{{adat.id}}</td>
+                        <td>{{adat.projektid}}</td>
+                        <td>{{adat.nev}}</td>
+                        <td>{{adat.leiras}}</td>
+                        <td>
+                            <span *ngIf="adat.statusz === 1" class="text-success">&#10004;</span>
+                            <span *ngIf="adat.statusz === 0" class="text-danger">&#10008;</span>
+                        </td>
+                        <td>
+                            <button class="btn btn-danger" (click)="torol(adat.id)">Törlés</button>
+                        </td>
+                        <td>
+                            <a href="feladat/modosit/{{adat.id}}" class="btn btn-primary">Módosít</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
 </div>

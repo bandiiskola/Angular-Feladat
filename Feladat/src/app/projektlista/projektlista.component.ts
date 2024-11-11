@@ -24,4 +24,19 @@ export class ProjektlistaComponent implements OnInit{
         }
       )
     }
+
+    torol(id: string){
+      const url=`https://berenandor.moriczcloud.hu/projekt/torles/${id}`;
+      console.log(url);
+      this.apiService.apiHivas(url).subscribe(
+        response =>{
+          console.log('Api válasz: ',response);
+          this.adatok = response
+          location.reload();
+        },
+        error =>{
+          console.error('Hiba az API hívás során:')
+        }
+      )
+    }
 }

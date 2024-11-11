@@ -41,6 +41,7 @@ export class FeladatfelvitelComponent implements OnInit{
         {
           (document.getElementById('statusz') as HTMLInputElement).checked=true;
         }
+        window.location.href = "/feladat/lista";
       },
       error =>{
         console.error('Hiba az API hívás során:')

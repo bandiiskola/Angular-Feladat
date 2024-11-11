@@ -42,6 +42,7 @@ export class FeladatlistaComponent implements OnInit{
         response =>{
           console.log('Api válasz: ',response);
           this.adatok = response
+          location.reload();
         },
         error =>{
           console.error('Hiba az API hívás során:')

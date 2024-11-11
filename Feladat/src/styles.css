@@ -1,1 +1,15 @@
-/* You can add global styles to this file, and also import other style files */
+header a{
+    text-decoration: none;
+    color: #ccc;
+    margin: 1rem;
+}
+header{
+    text-align: center;
+    padding: 1rem;
+    background-color: rgb(26, 25, 25);
+    border-bottom-right-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+}
+.szines{
+    background-color: rgb(26, 24, 24);
+}

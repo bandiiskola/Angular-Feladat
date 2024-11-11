@@ -1,7 +1,36 @@
-<div *ngFor="let adat of adatok">
-    <h1>({{adat.id}}){{adat.nev}}</h1>
-    <p>{{adat.leiras}}</p>
-    <a class="btn btn-primary" href="/feladat/lista/{{adat.id}}">Letsgoo</a>
-    <a class="btn btn-primary" href="/projekt/modosit/{{adat.id}}">Módosít</a>
-
+<div class="container mt-5">
+    <div class="card bg-dark text-white shadow-sm rounded p-4">
+        <div class="card-body">
+            <h4 class="card-title text-center mb-4">Projekt Lista</h4>
+            <table class="table table-dark table-striped">
+                <thead>
+                    <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">Név</th>
+                        <th scope="col">Leírás</th>
+                        <th scope="col">Státusz</th>
+                        <th scope="col"></th>
+                        <th scope="col"></th>
+                        <th scope="col"></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let adat of adatok">
+                        <td>{{adat.id}}</td>
+                        <td>{{adat.nev}}</td>
+                        <td>{{adat.leiras}}</td>
+                        <td>
+                            <a class="btn btn-primary" href="/feladat/lista/{{adat.id}}">Feladatok</a>
+                        </td>
+                        <td>
+                            <a class="btn btn-warning" href="/projekt/modosit/{{adat.id}}">Módosít</a>
+                        </td>
+                        <td>
+                            <a class="btn btn-danger" (click)="torol(adat.id)">Törlés</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
 </div>

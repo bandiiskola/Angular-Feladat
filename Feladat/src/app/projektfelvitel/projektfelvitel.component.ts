@@ -27,6 +27,7 @@ export class ProjektfelvitelComponent implements OnInit{
         console.log(adat);
         (document.getElementById('nev') as HTMLInputElement).value=adat[1];
         (document.getElementById('leiras') as HTMLInputElement).value=adat[2];
+        window.location.href = "/projekt/lista";
       },
       error =>{
         console.error('Hiba az API hívás során:')

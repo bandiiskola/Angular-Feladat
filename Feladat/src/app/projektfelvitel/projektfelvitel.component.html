@@ -1,16 +1,22 @@
-<div>
-    <div class="row">
-        <div class="col-md-6">
-            <label for="nev">Név</label>
-            <input type="text" id="nev" name="nev" maxlength="50">
-        </div>
-        <div class="col-md-6">
-            <label for="leiras">Leírás</label>
-            <input type="text" id="leiras" name="leiras" maxlength="255">
-        </div>
-    <div class="row text-center">
-        <div class="col-md-12 text-center">
-            <button class="btn btn-primary" (click)="callAPI()">Feltölt</button>
+<div class="container mt-5">
+    <div class="card shadow-sm rounded p-4 bg-dark text-light">
+        <div class="card-body">
+            <h4 class="card-title text-center mb-4">Adatok Felvétele</h4>
+                <div class="row mb-3">
+                    <div class="col-md-6">
+                        <label for="nev" class="form-label">Név</label>
+                        <input type="text" id="nev" name="nev" maxlength="50" class="form-control" placeholder="Add meg a nevet">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="leiras" class="form-label">Leírás</label>
+                        <input type="text" id="leiras" name="leiras" maxlength="255" class="form-control" placeholder="Leírás">
+                    </div>
+                </div>
+                <div class="row text-center">
+                    <div class="col-md-12">
+                        <button class="btn btn-primary w-100" (click)="callAPI()">Feltölt</button>
+                    </div>
+                </div>
         </div>
     </div>
 </div>
