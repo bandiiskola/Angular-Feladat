@@ -1,7 +1,21 @@
 <div>
     <div class="row">
         <div class="col-md-3">
-            <input type="text">
+            <input type="text" id="nev" name="nev" maxlength="50">
+        </div>
+        <div class="col-md-3">
+            <input type="text" id="leiras" name="leiras" maxlength="255">
+        </div>
+        <div class="col-md-2">
+            <input type="number" id="projektid" name="projektid" maxlength="11" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);">
+        </div>
+        <div class="col-md-1">
+            <input type="checkbox" id="statusz" name="statusz">
+        </div>
+    </div>
+    <div class="row text-center">
+        <div class="col-md-3 text-center">
+            <button class="btn btn-primary" (click)="callAPI()">Feltölt</button>
         </div>
     </div>
 </div>

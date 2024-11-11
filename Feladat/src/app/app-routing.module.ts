@@ -7,11 +7,11 @@ import { ProjektlistaComponent } from './projektlista/projektlista.component';
 import { FeladatlistaComponent } from './feladatlista/feladatlista.component';
 
 const routes: Routes = [
-  {path:'/',component:FooldalComponent},
-  {path:'/projekt/feltolt',component:ProjektfelvitelComponent},
-  {path:'/feladat/feltolt',component:FeladatfelvitelComponent},
-  {path:'/projekt/lista',component:ProjektlistaComponent},
-  {path:'/feladat/lista',component:FeladatlistaComponent},
+  {path:'',component:FooldalComponent},
+  {path:'projekt/feltolt',component:ProjektfelvitelComponent},
+  {path:'feladat/feltolt',component:FeladatfelvitelComponent},
+  {path:'projekt/lista',component:ProjektlistaComponent},
+  {path:'feladat/lista',component:FeladatlistaComponent},
 ];
 
 @NgModule({
